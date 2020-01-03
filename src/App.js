@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <PermissionsList 
-          onClick={() => handlePermissionId()}
+          handleClick={() => handlePermissionId()}
           permissions={permissions}/>
       </header>
     </div>
