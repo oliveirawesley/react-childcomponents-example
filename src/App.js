@@ -9,15 +9,16 @@ function App() {
     {id: 2, title: 'Permissão 2'}
   ]
 
-  function handlePermissionId() {
-    console.log('Chamou a função')
+  function handlePermissionId(permissionId) {
+    const permission = permissions.find(p => p.id === permissionId);
+    console.log('clicou em:', permission.id);
   }
 
   return (
     <div className="App">
       <header className="App-header">
         <PermissionsList 
-          handleClick={() => handlePermissionId()}
+          onClick={handlePermissionId}
           permissions={permissions}/>
       </header>
     </div>
